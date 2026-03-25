@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RetroVault – Classic Game Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">🕹️ RetroVault</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#consoles">Consoles</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cart">🛒 <span class="cart-count">0</span></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="scanlines"></div>
+    <div class="hero-content">
+      <p class="hero-sub">INSERT COIN TO CONTINUE</p>
+      <h1 class="hero-title">RETROVAULT</h1>
+      <p class="hero-desc">Your ultimate destination for classic retro games, consoles & cartridges from the golden era of gaming.</p>
+      <div class="hero-btns">
+        <a href="#shop" class="btn btn-primary">Browse Games</a>
+        <a href="#featured" class="btn btn-outline">Featured Deals</a>
+      </div>
+    </div>
+    <div class="pixel-art">
+      <div class="pixel-char"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      🎮 FREE SHIPPING ON ORDERS OVER $50 &nbsp;|&nbsp; 🕹️ NEW ARRIVALS EVERY FRIDAY &nbsp;|&nbsp; 👾 USE CODE RETRO10 FOR 10% OFF &nbsp;|&nbsp; 🏆 OVER 500+ CLASSIC TITLES IN STOCK &nbsp;|&nbsp; 🎮 FREE SHIPPING ON ORDERS OVER $50 &nbsp;|&nbsp; 🕹️ NEW ARRIVALS EVERY FRIDAY &nbsp;|&nbsp; 👾 USE CODE RETRO10 FOR 10% OFF &nbsp;|&nbsp; 🏆 OVER 500+ CLASSIC TITLES IN STOCK
+    </div>
+  </div>
+
+  <!-- FEATURED -->
+  <section class="section" id="featured">
+    <h2 class="section-title">⭐ FEATURED DEALS</h2>
+    <div class="featured-grid">
+      <div class="featured-card big">
+        <div class="badge">HOT DEAL</div>
+        <div class="featured-img nes-img"></div>
+        <div class="featured-info">
+          <span class="platform-tag nes">NES</span>
+          <h3>Super Mario Bros. 3</h3>
+          <p>The legendary platformer that defined a generation. Complete in box with manual.</p>
+          <div class="price-row"><span class="price">$34.99</span><span class="old-price">$49.99</span></div>
+          <button class="btn btn-primary add-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="featured-card">
+        <div class="badge sale">SALE</div>
+        <div class="featured-img snes-img"></div>
+        <div class="featured-info">
+          <span class="platform-tag snes">SNES</span>
+          <h3>The Legend of Zelda: A Link to the Past</h3>
+          <div class="price-row"><span class="price">$44.99</span><span class="old-price">$59.99</span></div>
+          <button class="btn btn-primary add-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="featured-card">
+        <div class="badge new">NEW</div>
+        <div class="featured-img n64-img"></div>
+        <div class="featured-info">
+          <span class="platform-tag n64">N64</span>
+          <h3>GoldenEye 007</h3>
+          <div class="price-row"><span class="price">$39.99</span></div>
+          <button class="btn btn-primary add-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section" id="shop">
+    <h2 class="section-title">🎮 GAME LIBRARY</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="nes">NES</button>
+      <button class="filter-btn" data-filter="snes">SNES</button>
+      <button class="filter-btn" data-filter="n64">N64</button>
+      <button class="filter-btn" data-filter="gb">Game Boy</button>
+      <button class="filter-btn" data-filter="sega">Sega</button>
+    </div>
+    <div class="games-grid" id="gamesGrid">
+
+      <div class="game-card" data-cat="nes">
+        <div class="game-img nes-img2"></div>
+        <div class="game-info">
+          <span class="platform-tag nes">NES</span>
+          <h4>Mega Man 2</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="nes">
+        <div class="game-img nes-img3"></div>
+        <div class="game-info">
+          <span class="platform-tag nes">NES</span>
+          <h4>Contra</h4>
+          <div class="stars">★★★★☆</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="snes">
+        <div class="game-img snes-img2"></div>
+        <div class="game-info">
+          <span class="platform-tag snes">SNES</span>
+          <h4>Super Metroid</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="snes">
+        <div class="game-img snes-img3"></div>
+        <div class="game-info">
+          <span class="platform-tag snes">SNES</span>
+          <h4>Donkey Kong Country</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="n64">
+        <div class="game-img n64-img2"></div>
+        <div class="game-info">
+          <span class="platform-tag n64">N64</span>
+          <h4>Super Mario 64</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="n64">
+        <div class="game-img n64-img3"></div>
+        <div class="game-info">
+          <span class="platform-tag n64">N64</span>
+          <h4>Banjo-Kazooie</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="gb">
+        <div class="game-img gb-img"></div>
+        <div class="game-info">
+          <span class="platform-tag gb">Game Boy</span>
+          <h4>Pokémon Red</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="gb">
+        <div class="game-img gb-img2"></div>
+        <div class="game-info">
+          <span class="platform-tag gb">Game Boy</span>
+          <h4>Tetris</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="sega">
+        <div class="game-img sega-img"></div>
+        <div class="game-info">
+          <span class="platform-tag sega">Sega</span>
+          <h4>Sonic the Hedgehog 2</h4>
+          <div class="stars">★★★★★</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-cat="sega">
+        <div class="game-img sega-img2"></div>
+        <div class="game-info">
+          <span class="platform-tag sega">Sega</span>
+          <h4>Streets of Rage 2</h4>
+          <div class="stars">★★★★☆</div>
+          <div class="price-row"><span class="price">$10</span></div>
+          <button class="btn btn-sm add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONSOLES -->
+  <section class="section consoles-section" id="consoles">
+    <h2 class="section-title">🕹️ CONSOLES FOR SALE</h2>
+    <div class="consoles-grid">
+      <div class="console-card">
+        <div class="console-icon">🎮</div>
+        <h3>Nintendo NES</h3>
+        <p>Original hardware, tested & cleaned. Includes 2 controllers.</p>
+        <span class="price">$89.99</span>
+        <button class="btn btn-outline add-cart">Buy Now</button>
+      </div>
+      <div class="console-card">
+        <div class="console-icon">🕹️</div>
+        <h3>Super Nintendo</h3>
+        <p>SNES console bundle with 2 controllers and AV cables.</p>
+        <span class="price">$119.99</span>
+        <button class="btn btn-outline add-cart">Buy Now</button>
+      </div>
+      <div class="console-card">
+        <div class="console-icon">👾</div>
+        <h3>Nintendo 64</h3>
+        <p>N64 with expansion pak, 1 controller, and jumper pak.</p>
+        <span class="price">$99.99</span>
+        <button class="btn btn-outline add-cart">Buy Now</button>
+      </div>
+      <div class="console-card">
+        <div class="console-icon">🎯</div>
+        <h3>Sega Genesis</h3>
+        <p>Model 2 console, 2 controllers, power supply included.</p>
+        <span class="price">$79.99</span>
+        <button class="btn btn-outline add-cart">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why-section">
+    <h2 class="section-title">💡 WHY RETROVAULT?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🔍</div>
+        <h4>Tested & Verified</h4>
+        <p>Every game and console is tested before listing. No dead cartridges here.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📦</div>
+        <h4>Safe Packaging</h4>
+        <p>Bubble wrap, foam inserts, and sturdy boxes keep your retro gear safe.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💳</div>
+        <h4>Secure Checkout</h4>
+        <p>SSL encrypted payments. We accept cards, PayPal, and crypto.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔄</div>
+        <h4>30-Day Returns</h4>
+        <p>Not happy? Return it within 30 days, no questions asked.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <h2 class="section-title">📡 CONTACT US</h2>
+    <div class="contact-wrap">
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <select>
+          <option value="">-- Select Topic --</option>
+          <option>Order Inquiry</option>
+          <option>Game Request</option>
+          <option>Sell My Games</option>
+          <option>Other</option>
+        </select>
+        <textarea rows="5" placeholder="Your message..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Message 📨</button>
+      </form>
+      <div class="contact-info">
+        <div class="info-item">📧 hello@retrovault.com</div>
+        <div class="info-item">📞 +1 (800) RETRO-99</div>
+        <div class="info-item">📍 123 Pixel Street, Game City, CA 90210</div>
+        <div class="info-item">🕐 Mon–Sat: 9AM – 6PM PST</div>
+        <div class="social-links">
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+          <a href="#">Discord</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">🕹️ RetroVault</div>
+        <p>Preserving gaming history, one cartridge at a time.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Shop</h5>
+        <a href="#shop">All Games</a>
+        <a href="#consoles">Consoles</a>
+        <a href="#">Accessories</a>
+        <a href="#">Bundles</a>
+      </div>
+      <div class="footer-links">
+        <h5>Support</h5>
+        <a href="#">FAQ</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Returns</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RetroVault. All rights reserved. &nbsp;|&nbsp; Made with ❤️ for gamers</p>
+    </div>
+  </footer>
+
+  <!-- CART TOAST -->
+  <div class="toast" id="toast">🛒 Added to cart!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
