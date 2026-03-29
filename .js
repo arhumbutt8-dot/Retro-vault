@@ -20,14 +20,30 @@ function RecentlyViewed() {
 
   if (items.length === 0) return null;
 
-  return React.createElement('section', { className: 'section recently-viewed' },
-    React.createElement('h2', { className: 'section-title' }, '🕐 RECENTLY VIEWED'),
-    React.createElement('div', { className: 'recently-grid' },
+  const platformColors = {
+    nes:     'bg-red-600',
+    snes:    'bg-purple-700',
+    n64:     'bg-green-700',
+    gb:      'bg-blue-600',
+    sega:    'bg-blue-800',
+    console: 'bg-gray-600',
+  };
+
+  return React.createElement('section', { className: 'py-16 px-8 border-t border-gray-800 max-w-6xl mx-auto' },
+    React.createElement('h2', {
+      className: 'text-center text-yellow-400 tracking-widest mb-10 text-sm uppercase font-bold'
+    }, '🕐 Recently Viewed'),
+    React.createElement('div', { className: 'flex flex-wrap gap-4 justify-center' },
       items.map((item, i) =>
-        React.createElement('div', { key: i, className: 'recently-card' },
-          React.createElement('span', { className: `platform-tag ${item.platform.toLowerCase()}` }, item.platform),
-          React.createElement('p', { className: 'recently-name' }, item.name),
-          React.createElement('span', { className: 'price' }, item.price)
+        React.createElement('div', {
+          key: i,
+          className: 'bg-gray-900 border border-gray-700 hover:border-cyan-400 transition-colors duration-200 p-4 rounded min-w-[160px] flex flex-col gap-2'
+        },
+          React.createElement('span', {
+            className: `text-white text-xs font-bold px-2 py-1 rounded w-fit ${platformColors[item.platform.toLowerCase()] || 'bg-gray-600'}`
+          }, item.platform),
+          React.createElement('p', { className: 'text-white text-sm font-semibold' }, item.name),
+          React.createElement('span', { className: 'text-green-400 font-bold text-base' }, item.price)
         )
       )
     )
